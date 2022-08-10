@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router , Routes , Route } from 'react-router-dom';
+import {BrowserRouter as Router , Routes , Route , Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register'; 
@@ -14,7 +14,7 @@ import PrivateRoute from './components/PrivateRoute';
 function App() {
   return (
     <>
-    <Router forceRefresh={true}>
+    <Router >
         <div className="container">
         <Header/>
             <Routes>
@@ -27,7 +27,7 @@ function App() {
                 <Route path="/tickets" element = {<PrivateRoute/>} >
                     <Route path="/tickets" element={<Tickets />} /> 
                 </Route>
-                
+                <Route path="*" element={<Navigate to ="/" />} />
             </Routes>
         </div>
     </Router>
