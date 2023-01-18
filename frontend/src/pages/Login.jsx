@@ -44,6 +44,7 @@ function Login() {
   useEffect(() => {
     if(isError){
         toast.error(message);
+        
     }
     // Redirect when loged in 
 

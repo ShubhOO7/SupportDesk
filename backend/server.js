@@ -10,7 +10,7 @@ const app = express();
 
 // Previously we user Body Parser library to destruct the object data but not express handle itself
 app.use(express.json());
-app.use(express.urlencoded({extendend : false}));
+// app.use(express.urlencoded({extendend : false}));
 
 
 //Connection to Database
